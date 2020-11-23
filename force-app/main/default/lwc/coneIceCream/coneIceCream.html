@@ -1,17 +1,17 @@
 <template>
   <lightning-card title="Cone IceCream">
-    <div class="icecream slds-p-horizontal_small">
-      <p class="cone"></p>
-      <!-- <p>Please start adding scoops</p> -->
+    <template if:true={getConeStake}>
+      <div class="icecream slds-p-horizontal_small">
+        <p class="cone"></p>
 
-      <div class="scoop chocolate"></div>
-      <div class="scoop vanilla"></div>
-      <div class="scoop orange"></div>
-      <div class="scoop strawberry"></div>
-      <div class="scoop chocolate"></div>
-      <div class="scoop vanilla react"></div>
-      <div class="scoop lemon"></div>
-      <!-- <div class="cherry"></div> -->
-    </div>
+        <template for:each={coneStack} for:item="cone">
+          <div key={cone.id} class={cone.flavorClass}></div>
+          <!-- <div class="cherry"></div> -->
+        </template>
+      </div>
+    </template>
+    <template if:false={getConeStake}>
+      <p>Select your scoop !!!</p>
+    </template>
   </lightning-card>
 </template>

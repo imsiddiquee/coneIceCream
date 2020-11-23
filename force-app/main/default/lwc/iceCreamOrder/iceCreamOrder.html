@@ -1,6 +1,98 @@
 <template>
-  <lightning-card title="Place a order">
-    <p class="slds-p-horizontal_small"></p>
-    <p slot="footer">Card Footer</p>
+  <lightning-card title="Place a order" style="width: 100%">
+    <div class="slds-p-horizontal_small slds-var-m">
+      <div class="slds-grid slds-gutters">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+          <thead>
+            <tr class="slds-line-height_reset">
+              <th class="" scope="col">
+                <div class="slds-truncate" title="Name">#SN</div>
+              </th>
+              <th class="" scope="col">
+                <div class="slds-truncate" title="First Name">Flavor</div>
+              </th>
+              <th class="" scope="col">
+                <div class="slds-truncate" title="Last Name">Qty</div>
+              </th>
+              <th class="" scope="col">
+                <div class="slds-truncate" title="Phone">Price</div>
+              </th>
+              <th class="" scope="col">
+                <div class="slds-truncate" title="Email">+</div>
+              </th>
+              <th class="" scope="col">
+                <div class="slds-truncate" title="Email">-</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <template for:each={iceCreamItemList} for:item="con">
+              <tr key={con.id}>
+                <th scope="col">
+                  <div>{con.id}</div>
+                </th>
+                <th scope="col">
+                  <div>{con.flavor}</div>
+                </th>
+                <th scope="col">
+                  <div>{con.qty}</div>
+                </th>
+                <th scope="col">
+                  <div>
+                    <lightning-formatted-phone
+                      value={con.displayPrice}
+                    ></lightning-formatted-phone>
+                  </div>
+                </th>
+                <th scope="col">
+                  <lightning-button
+                    variant="brand"
+                    title="Download action with brand variant"
+                    icon-name="utility:add"
+                    class="slds-m-left_x-small"
+                    onclick={handleAdd}
+                    data-value={con.flavor}
+                    data-flavorindex={con.id}
+                  ></lightning-button>
+                </th>
+                <template if:true={con.qty}>
+                  <th scope="col">
+                    <lightning-button
+                      variant="destructive"
+                      title="Delete action with destructive variant"
+                      icon-name="utility:dash"
+                      class="slds-m-left_x-small"
+                      data-value={con.flavor}
+                      data-flavorindex={con.id}
+                      onclick={handleDelete}
+                    ></lightning-button>
+                  </th>
+                </template>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p slot="footer">
+      <lightning-layout pull-to-boundary="small">
+        <lightning-layout-item
+          size="1"
+          padding="horizontal-small"
+          flexibility="grow"
+        >
+          <lightning-button
+            variant="success"
+            label="Success"
+            title="Successful action"
+            onclick={handleClick}
+            class="slds-m-left_x-small"
+          ></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="horizontal-small">
+          <lightning-button variant="brand" label="Add"> </lightning-button>
+        </lightning-layout-item>
+      </lightning-layout>
+    </p>
   </lightning-card>
 </template>
