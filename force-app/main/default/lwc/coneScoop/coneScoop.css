@@ -1,4 +1,12 @@
 /* ice cream */
+.icecreamMessage {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+  min-width: 200px;
+}
 .icecream {
   display: flex;
   flex-direction: column-reverse;
@@ -7,6 +15,7 @@
   height: 100%;
   width: 100%;
   min-height: 300px;
+  min-width: 200px;
 }
 
 .cone {
