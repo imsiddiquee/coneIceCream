@@ -5,7 +5,7 @@ export default class IceCreamOrder extends LightningElement {
   iceCreamItemList = [
     {
       flavor: "chocolate",
-      price: 1
+      price: 3
     },
     {
       flavor: "vanilla",
@@ -13,7 +13,7 @@ export default class IceCreamOrder extends LightningElement {
     },
     {
       flavor: "strawberry",
-      price: 1
+      price: 2
     },
     {
       flavor: "orange",
@@ -21,7 +21,7 @@ export default class IceCreamOrder extends LightningElement {
     },
     {
       flavor: "lemon",
-      price: 1
+      price: 5
     }
   ];
   connectedCallback() {
@@ -38,6 +38,21 @@ export default class IceCreamOrder extends LightningElement {
     });
 
     this.iceCreamItemList = result;
+  }
+
+  get getTotalPrice() {
+    let totalPrice = this.iceCreamItemList.reduce(
+      (n, { qty, price }) => n + qty * price,
+      0
+    );
+
+    return totalPrice + " $";
+  }
+
+  get getTotalScoop() {
+    let totalScoop = this.iceCreamItemList.reduce((n, { qty }) => n + qty, 0);
+
+    return totalScoop;
   }
 
   handleAdd(event) {
