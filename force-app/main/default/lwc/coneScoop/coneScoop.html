@@ -1,5 +1,5 @@
 <template>
-  <lightning-card title="Cone IceCream">
+  <lightning-card title="Cone Spoon">
     <template if:true={getConeStake}>
       <div class="icecream slds-p-horizontal_small">
         <p class="cone"></p>
@@ -11,7 +11,19 @@
       </div>
     </template>
     <template if:false={getConeStake}>
-      <p>Select your scoop !!!</p>
+      <div class="icecreamMessage">
+        <div class="slds-text-heading_large slds-text-align_center">
+          Let's grab some
+        </div>
+        <div class="slds-text-heading_large slds-text-align_center">
+          scoop with
+        </div>
+        <div
+          class="slds-text-heading_large slds-text-align_center slds-text-color_error"
+        >
+          cone !!!
+        </div>
+      </div>
     </template>
   </lightning-card>
 </template>

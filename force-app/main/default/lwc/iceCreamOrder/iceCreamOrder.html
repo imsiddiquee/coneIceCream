@@ -1,5 +1,5 @@
 <template>
-  <lightning-card title="Place a order" style="width: 100%">
+  <lightning-card title="Build your own Ice Cream" style="width: 100%">
     <div class="slds-p-horizontal_small slds-var-m">
       <div class="slds-grid slds-gutters">
         <table class="slds-table slds-table_cell-buffer slds-table_bordered">
@@ -32,17 +32,13 @@
                   <div>{con.id}</div>
                 </th>
                 <th scope="col">
-                  <div>{con.flavor}</div>
+                  <div class="slds-text-title_caps">{con.flavor}</div>
                 </th>
                 <th scope="col">
                   <div>{con.qty}</div>
                 </th>
                 <th scope="col">
-                  <div>
-                    <lightning-formatted-phone
-                      value={con.displayPrice}
-                    ></lightning-formatted-phone>
-                  </div>
+                  <div>{con.displayPrice}</div>
                 </th>
                 <th scope="col">
                   <lightning-button
@@ -71,28 +67,27 @@
               </tr>
             </template>
           </tbody>
+
+          <tfoot>
+            <tr>
+              <th scope="col" colspan="5">
+                <div class="slds-text-title_bold">
+                  Total Scoop:: { getTotalScoop }
+                </div>
+                <div class="slds-text-title_bold">
+                  Total Price:: {getTotalPrice}
+                </div>
+              </th>
+            </tr>
+          </tfoot>
         </table>
       </div>
     </div>
-    <p slot="footer">
-      <lightning-layout pull-to-boundary="small">
-        <lightning-layout-item
-          size="1"
-          padding="horizontal-small"
-          flexibility="grow"
-        >
-          <lightning-button
-            variant="success"
-            label="Success"
-            title="Successful action"
-            onclick={handleClick}
-            class="slds-m-left_x-small"
-          ></lightning-button>
-        </lightning-layout-item>
-        <lightning-layout-item padding="horizontal-small">
-          <lightning-button variant="brand" label="Add"> </lightning-button>
-        </lightning-layout-item>
-      </lightning-layout>
-    </p>
+    <lightning-button
+      variant="success"
+      label="Add to card"
+      title="Add to card !!!"
+      class="slds-button slds-button_success slds-button_stretch"
+    ></lightning-button>
   </lightning-card>
 </template>
