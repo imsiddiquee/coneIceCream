@@ -1,5 +1,11 @@
 <template>
   <lightning-layout>
+    <template if:true={processing}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="small"
+      ></lightning-spinner>
+    </template>
     <lightning-layout-item padding="around-small">
       <c-cone-scoop cone-stack={coneStack}></c-cone-scoop>
     </lightning-layout-item>
