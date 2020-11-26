@@ -13,9 +13,12 @@ How to use complex type expression in LWC, Let's create one LWC project, where w
 ## Here we can learn:
 
 • On template loop(for) how to use the expression like:. {[ITEM.scoop, ITEM[scoop]].join(' ')}
+
 • How to pass data among component and synch data functionality, add/removed order; accumulate/lifted
 the cone scoop, Two-component data must be a synch.
+
 • Popup event.
+
 • Base on event data syncs with components.
 • On property object array; a way to calculate the accumulated sum.
 • Update specific object on the array, without change the list order.
@@ -39,9 +42,10 @@ Here EXPRESSION is
 ```
 
 In LWC, you can not use that EXPRESSION , Then what you do? There is two way; you can apply expressions
-1)On DATA-SOURCE, runtime add a new property which contain EXPRESSION calculated result.
-2)Create a child component which internally uses a getter or tracked variable which builds the EXPRESSION.
-I applied this concept in my coneScoop component at addConFlavorItem() method and implement in following
+
+1. On DATA-SOURCE, runtime add a new property which contain EXPRESSION calculated result.
+2. Create a child component which internally uses a getter or tracked variable which builds the EXPRESSION.
+   I applied this concept in my coneScoop component at addConFlavorItem() method and implement in following
 
 ```
 <div key={cone.id} class={cone.flavorClass}></div>
