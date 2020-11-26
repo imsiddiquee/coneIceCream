@@ -1,10 +1,14 @@
-# Salesforce DX Project: Next Steps
+# Logical expression In the template loop.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+You can not use concatenate or math expression on the LWC template loop(for), because the LWC template not support logical expression except the if condition.
 
-## How Do You Plan to Deploy Your Changes?
+## Overview
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+How to use complex type expression in LWC, Let's create one LWC project, where we prepare our loveable cone icecream. Here we used a component container, which holds two components one shows the configure cone scoop, and another one used to help us order the scoop. In the project, we need to synch data among components to calculate the total selected cone scoops and price.
+
+### Project components internal structure
+
+(https://github.com/imsiddiquee/coneIceCream/blob/main/postContent/Component%20internal%20structure.png)
 
 ## Configure Your Salesforce DX Project
 
