@@ -12,18 +12,17 @@ How to use complex type expression in LWC, Let's create one LWC project, where w
 
 ## Here we can learn:
 
+```
 • On template loop(for) how to use the expression like:. {[ITEM.scoop, ITEM[scoop]].join(' ')}
-
 • How to pass data among component and synch data functionality, add/removed order; accumulate/lifted
 the cone scoop, Two-component data must be a synch.
-
 • Popup event.
-
 • Base on event data syncs with components.
 • On property object array; a way to calculate the accumulated sum.
 • Update specific object on the array, without change the list order.
 • In an array without a change order, how to remove a specific object?
 • How to use the conditional spinner on the components container?
+```
 
 I break down the project components into easy-to-understand parts with self-explanatory code. Want to understand template expression and data synch process(add/removed), without breaking the array index among components? Please review the work!
 
