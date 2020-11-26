@@ -6,6 +6,10 @@ You can not use concatenate or math expression on the LWC template loop(for), be
 
 How to use complex type expression in LWC, Let's create one LWC project, where we customize our favorite cone icecream. Here we used a component container, which holds two components one shows the configure cone scoop, and another one used to help us order the scoop. In the project, we need to synch data among components to calculate the total selected cone scoops and price.
 
+### Project presentation
+
+![Project-presentation](https://github.com/imsiddiquee/coneIceCream/blob/main/postContent/Project-presentation.gif)
+
 ### Project components internal structure
 
 ![Component-internal-structure](https://github.com/imsiddiquee/coneIceCream/blob/main/postContent/Component-internal-structure.png)
