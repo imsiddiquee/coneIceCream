@@ -1,4 +1,4 @@
-# Logical expression In the template loop.
+# Complex Logical expression In the template loop.
 
 You can not use concatenate or math expression on the LWC template loop(for), because the LWC template not support logical expression except the if condition.
 
