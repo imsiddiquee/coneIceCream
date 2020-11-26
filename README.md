@@ -8,7 +8,7 @@ How to use complex type expression in LWC, Let's create one LWC project, where w
 
 ### Project components internal structure
 
-(https://github.com/imsiddiquee/coneIceCream/blob/main/postContent/Component-internal-structure.png)
+![Component-internal-structure](https://github.com/imsiddiquee/coneIceCream/blob/main/postContent/Component-internal-structure.png)
 
 ## Configure Your Salesforce DX Project
 
