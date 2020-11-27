@@ -18,7 +18,8 @@ How to use the complex expression in LWC. Let’s make it interesting, Let us cr
 
 ```
 • On template loop(for) how to use the expression like:. {[ITEM.scoop, ITEM[scoop]].join(' ')}
-• How to pass data among component and sync data functionality, add/remove order; accumulate/lift the cone scoop, Two-component data must sync.
+• How to pass data among component and sync data functionality, add/remove order;
+  accumulate/lift the cone scoop, Two-component data must sync.
 • Popup event.
 • Based on event data sync with components.
 • On property object array; a way to calculate the accumulated sum.
