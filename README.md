@@ -1,10 +1,10 @@
 # Complex Logical expression In the template loop.
 
-You can not use concatenate or math expression on the LWC template loop(for), because the LWC template not support logical expression except the if condition.
+You can not use concatenate or math expression on the LWC template loop(for), because the LWC template do not support logical expression except the if condition.
 
 ## Overview
 
-How to use complex type expression in LWC, Let's create one LWC project, where we customize our favorite cone icecream. Here we used a component container, which holds two components one shows the configure cone scoop, and another one used to help us order the scoop. In the project, we need to synch data among components to calculate the total selected cone scoops and price.
+How to use the complex expression in LWC. Let’s make it interesting, Let us create one LWC project, make some fun and make it interesting. Ifs always fascinating to create something of your own and especially when it comes to ice cream. Let's create magic with this project. In the project, we are going to customize our favorite cone-icecream. Here we used a component container, which holds two components one shows the configuration of a cone scoop and the other used to help us choose the scoops. In this project, we need to sync data among components to calculate the total selected cone scoops and price.
 
 ### Project presentation
 
@@ -18,17 +18,19 @@ How to use complex type expression in LWC, Let's create one LWC project, where w
 
 ```
 • On template loop(for) how to use the expression like:. {[ITEM.scoop, ITEM[scoop]].join(' ')}
-• How to pass data among component and synch data functionality, add/removed order; accumulate/lifted
-the cone scoop, Two-component data must be a synch.
+• How to pass data among component and sync data functionality, add/remove order; accumulate/lift the cone scoop, Two-component data must sync.
 • Popup event.
-• Base on event data syncs with components.
+• Based on event data sync with components.
 • On property object array; a way to calculate the accumulated sum.
 • Update specific object on the array, without change the list order.
-• In an array without a change order, how to remove a specific object?
-• How to use the conditional spinner on the components container?
+• How to remove a specific object in an array without changing order?
+• How to use the conditional spinner on the component container?
+
 ```
 
-I break down the project components into easy-to-understand parts with self-explanatory code. Want to understand template expression and data synch process(add/removed), without breaking the array index among components? Please review the work!
+I break down the project components into easy-to-understand parts with self-explanatory code. Want to understand template expression and data synch process(add/removed), without breaking the array index among components?
+
+Please review the work!
 
 In LWC templates I need to use string concatenate operation, unfortunately, LWC is not supporting logical expressions, suppose you have the following TAG
 
@@ -41,14 +43,14 @@ In LWC templates I need to use string concatenate operation, unfortunately, LWC 
 Here EXPRESSION is
 
 ```
-{ITEM.scoop}{Math.random()} or {[ITEM.scoop, ITEM[scoop]].join(' ')}\
+{ITEM.scoop}{Math.random()} or {[ITEM.scoop, ITEM[scoop]].join(' ')}
 ```
 
-In LWC, you can not use that EXPRESSION , Then what you do? There is two way; you can apply expressions
+In LWC, if you can not use that EXPRESSION, then what you do? There are two ways; you can apply expressions
 
 1. On DATA-SOURCE, runtime add a new property which contain EXPRESSION calculated result.
-2. Create a child component which internally uses a getter or tracked variable which builds the EXPRESSION.
-   I applied this concept in my coneScoop component at addConFlavorItem() method and implement in following
+2. Create a child component that internally uses a getter or tracked variable which builds the EXPRESSION. I applied this concept
+   in my coneScoop component at addConFlavorItem() method and implement in following
 
 ```
 <div key={cone.id} class={cone.flavorClass}></div>
